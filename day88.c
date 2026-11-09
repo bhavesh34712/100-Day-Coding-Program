@@ -1,0 +1,35 @@
+﻿/*
+ * 100 Days of Code - UPES
+ * Day 88 | Date: 09-Nov-2026
+ *
+ * Q138: Print all enum names and integer values using a loop.
+ *
+ * Sample Test Cases:
+ * Input 1:
+ * No input
+ * Output 1:
+ * RED=0
+ * YELLOW=1
+ * GREEN=2
+ * Explanation 1:
+ * Iterating through enum values prints each constant with its assigned integer.
+ */
+
+
+#include <stdio.h>
+
+enum Color {
+    RED,
+    YELLOW,
+    GREEN,
+    COLOR_COUNT
+};
+
+int main() {
+    const char *names[] = {"RED", "YELLOW", "GREEN"};
+
+    for (int i = 0; i < COLOR_COUNT; i++) {
+        printf("%s=%d\n", names[i], i);
+    }
+    return 0;
+}
